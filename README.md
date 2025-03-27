@@ -22,11 +22,9 @@ This is a simple project that provides Google Map links for various venues at St
 <br>
 <br>
 
-
 <h3><b>Project Preview</b></h3>
 <br>
-<img src="C:\Users\Ashiti\Desktop\tailwindcss\My-college-venues\Screenshot 2025-03-27 110811.png" witdth=400>
-
+<img src="./Screenshot 2025-03-27 110811.png" witdth=400>
 
 How to Use
 Click on a venue name to open its Google Map location.
