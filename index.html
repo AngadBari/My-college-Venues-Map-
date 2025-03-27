@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Venue</title>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="../src/output.css" />
+  </head>
+
+  <body class="bg-black font-['Roboto_Slab']">
+    <div class="min-h-screen p-4 sm:p-6 md:p-8">
+      <div class="max-w-3xl mx-auto">
+        <div class="p-6 m-3 rounded bg-gray-950">
+          <div class="flex items-center justify-center">
+            <img class="h-24 rounded-md" src="./AlDEL.jpg" alt="College Logo" />
+          </div>
+          <div class="flex items-center justify-center gap-4 mt-10">
+            <a href="https://www.sjchs.edu.in/">
+              <img
+                class="h-12 rounded-sm cursor-pointer"
+                src="./images.jpg"
+                alt=""
+              />
+            </a>
+
+            <a href="https://sjcem.edu.in/"
+              ><img
+                class="h-12 rounded-sm cursor-pointer"
+                src="./SJCEM.jpg"
+                alt=""
+              />
+            </a>
+
+            <a href="https://sjipr.edu.in/">
+              <img
+                class="h-12 rounded-sm cursor-pointer"
+                src="./SJCP&R.jpg"
+                alt=""
+              />
+            </a>
+
+            <a href="https://www.sjjc.edu.in/">
+              <img
+                class="h-12 rounded-sm cursor-pointer"
+                src="./JR COOLAGE.jpg"
+                alt=""
+              />
+            </a>
+
+            <a href="https://www.sjis.edu.in/">
+              <img
+                class="h-12 rounded-sm cursor-pointer"
+                src="./SJISCHOOL.png"
+                alt=""
+              />
+            </a>
+          </div>
+          <div>
+            <h1 class="text-2xl text-center text-white mt-7">
+              St.John College (Palgher)
+            </h1>
+            <p class="text-center text-white">
+              Here are the Google Map links for venues.
+            </p>
+          </div>
+
+          <div class="Social-Media">
+            <div
+              onclick="openModal('SJCHS Building')"
+              class="w-full p-3 mt-10 text-center text-white bg-gray-700 rounded-full cursor-pointer"
+            >
+              SJCHS Building
+            </div>
+            <div
+              onclick="openModal('SJCEM Building')"
+              class="w-full p-3 mt-10 text-center text-white bg-gray-700 rounded-full cursor-pointer"
+            >
+              SJCEM Building
+            </div>
+            <div
+              onclick="openModal('SJCP&R Building')"
+              class="w-full p-3 mt-10 text-center text-white bg-gray-700 rounded-full cursor-pointer"
+            >
+              SJCP&R Building
+            </div>
+            <div
+              onclick="openModal('SJ International High School Building')"
+              class="w-full p-3 mt-10 text-center text-white bg-gray-700 rounded-full cursor-pointer"
+            >
+              SJ International High School Building
+            </div>
+            <div
+              onclick="openModal('SJC Playground')"
+              class="w-full p-3 mt-10 text-center text-white bg-gray-700 rounded-full cursor-pointer"
+            >
+              SJC Playground
+            </div>
+            <div
+              onclick="openModal('Canteen')"
+              class="w-full p-3 mt-10 text-center text-white bg-gray-700 rounded-full cursor-pointer"
+            >
+              Canteen
+            </div>
+            <div
+              onclick="openModal('SuperMarket')"
+              class="w-full p-3 mt-10 text-center text-white bg-gray-700 rounded-full cursor-pointer"
+            >
+              SuperMarket
+            </div>
+
+            <footer class="mt-10 text-center text-white">
+              <p>Made by Angad Bari(SJCHS Student) | 26 March 2025</p>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="modal"
+      class="fixed inset-0 flex items-center justify-center hidden bg-black bg-opacity-50"
+    >
+      <div class="bg-white rounded-lg shadow-lg w-[90%] max-w-md p-6">
+        <div class="flex items-center justify-between mb-4">
+          <h2 id="modalTitle" class="text-xl font-bold">Venue</h2>
+          <button onclick="closeModal()" class="text-gray-600 hover:text-black">
+            &times;
+          </button>
+        </div>
+
+        <iframe
+          id="mapFrame"
+          class="w-full h-64 border rounded-lg"
+          src=""
+          allowfullscreen=""
+          loading="lazy"
+        >
+        </iframe>
+
+        <div class="flex flex-col gap-3 mt-4">
+          <a
+            id="directionsButton"
+            href="#"
+            target="_blank"
+            class="block w-full px-4 py-2 text-center text-white bg-gray-700 rounded-lg"
+          >
+            Get Directions
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const venueMaps = {
+        "SJCHS Building": {
+          embed:
+            "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3756.129184812544!2d72.78207307581714!3d19.707123431855425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be71c924189eb5d%3A0x422ad2d28162ca76!2sSt.%20John%20College%20of%20Humanities%20and%20Sciences!5e0!3m2!1sen!2sin!4v1742959360346!5m2!1sen!2sin",
+          directions:
+            "https://www.google.com/maps/dir/?api=1&destination=St.+John+College+of+Humanities+and+Sciences",
+        },
+        "SJCEM Building": {
+          embed:
+            "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3756.1545023702447!2d72.78093297581705!3d19.706045231890265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be71c92fbd91e67%3A0x2a3ce68676417a45!2sSt.%20John%20College%20of%20Engineering%20and%20Management!5e0!3m2!1sen!2sin!4v1742960265248!5m2!1sen!2sin",
+          directions:
+            "https://www.google.com/maps/dir/?api=1&destination=SJCEM+Building",
+        },
+        "SJCP&R Building": {
+          embed:
+            "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1878.0655245955968!2d72.78416975166952!3d19.707044035410323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be71c92564edc2d%3A0x966e82cdc089082b!2sSt.John%20Institute%20Of%20Pharmacy%20%26%20Research!5e0!3m2!1sen!2sin!4v1742960464746!5m2!1sen!2sin",
+          directions:
+            "https://www.google.com/maps/dir/?api=1&destination=SJCPR+Building",
+        },
+        "SJ International High School Building": {
+          embed:
+            "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3756.140389312345!2d72.782915!3d19.706998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be71c925f465f07%3A0x3f75d5fb4bc404b9!2sSt.%20John%20International%20School!5e0!3m2!1sen!2sin!4v1742962446118!5m2!1sen!2sin",
+          directions:
+            "https://www.google.com/maps/dir/?api=1&destination=SJ+International+High+School",
+        },
+        "SJC Playground": {
+          embed:
+            "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3756.140386313942!2d72.7838498!3d19.7066464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be71dbacc8107e1%3A0x44fee9b2e0d792f2!2sSt.%20John%20Technical%20Campus%20Playground!5e0!3m2!1sen!2sin!4v1742961436733!5m2!1sen!2sin",
+          directions:
+            "https://www.google.com/maps/dir/?api=1&destination=St.+John+Technical+Campus+Playground",
+        },
+        Canteen: {
+          embed:
+            "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3756.138338732352!2d72.7841171!3d19.7067336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be71c925a4de335%3A0xf9b5344221f05419!2sSt.%20John%20Technical%20Campus%20Canteen!5e0!3m2!1sen!2sin!4v1742961340891!5m2!1sen!2sin",
+          directions:
+            "https://www.google.com/maps/dir/?api=1&destination=St.+John+Technical+Campus+Canteen",
+        },
+        SuperMarket: {
+          embed:
+            "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d394.8151609133178!2d72.78330600199195!3d19.706833720312193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be71d7b15c0be8f%3A0x5dd8bceec8dd0f7!2sMount%20View%20Supermarket!5e0!3m2!1sen!2sin!4v1742961572026!5m2!1sen!2sin",
+          directions:
+            "https://www.google.com/maps/dir/?api=1&destination=Mount+View+Supermarket",
+        },
+      };
+
+      function openModal(venue) {
+        if (venueMaps[venue]) {
+          document.getElementById("modalTitle").textContent = venue;
+          document.getElementById("mapFrame").src = venueMaps[venue].embed;
+          document.getElementById("directionsButton").href =
+            venueMaps[venue].directions;
+          document.getElementById("modal").classList.remove("hidden");
+        } else {
+          console.error("Venue not found:", venue);
+        }
+      }
+
+      function closeModal() {
+        document.getElementById("modal").classList.add("hidden");
+        document.getElementById("mapFrame").src = "";
+      }
+    </script>
+  </body>
+</html>
